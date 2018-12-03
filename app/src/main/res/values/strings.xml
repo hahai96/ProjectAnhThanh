@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ProjectAnhThanh</string>
+    <string name="location">
+        <![CDATA[
+        <html>
+            <p> <font color="#DF7B42">Địa điểm:</font> Nhà thi đấu đa năng</p>
+        </html>]]>
+    </string>
+
+    <string name="fake_tv_time">Từ 07:00\nĐến 11:00</string>
+    <string name="fake_tv_description">Cắt băng khai trương và thăm không gian Văn hóa - Lịch sử</string>
+
+</resources>
