@@ -12,9 +12,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_row);
+        setContentView(R.layout.activity_main);
 
         tv_place = findViewById(R.id.tv_place);
         tv_place.setText(Html.fromHtml(getString(R.string.location)));
     }
 }
+
+

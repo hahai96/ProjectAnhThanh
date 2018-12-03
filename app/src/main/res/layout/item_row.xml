@@ -30,13 +30,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.daasuu.bl.BubbleLayout
-        android:id="@+id/bubbleLayout"
+        android:id="@+id/bubble_layout"
         android:layout_width="0dp"
         android:layout_height="@dimen/_130sdp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        app:bl_strokeColor="#c9c6c6"
+        app:bl_strokeColor="@color/color_bubble_layout_main"
         android:padding="@dimen/_8sdp"
         app:bl_arrowDirection="left"
         app:bl_arrowHeight="@dimen/_8sdp"
@@ -83,9 +83,9 @@
         android:textColor="@color/color_tv_main"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/bubbleLayout"
-        app:layout_constraintStart_toStartOf="@+id/bubbleLayout"
-        app:layout_constraintTop_toTopOf="@+id/bubbleLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/bubble_layout"
+        app:layout_constraintStart_toStartOf="@+id/bubble_layout"
+        app:layout_constraintTop_toTopOf="@+id/bubble_layout" />
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_profile"
@@ -95,12 +95,12 @@
         android:layout_marginTop="@dimen/_5sdp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_woman"
-        app:layout_constraintStart_toStartOf="@+id/bubbleLayout"
+        app:layout_constraintStart_toStartOf="@+id/bubble_layout"
         app:layout_constraintTop_toBottomOf="@+id/tv_description"
         app:riv_oval="true" />
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/roundedImageView5"
+        android:id="@+id/iv_rounded"
         android:layout_width="@dimen/_36sdp"
         android:layout_height="@dimen/_36sdp"
         android:layout_marginStart="@dimen/_10sdp"
@@ -118,11 +118,11 @@
         android:layout_marginEnd="@dimen/_5sdp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_girl_beautiful"
-        app:layout_constraintBottom_toBottomOf="@+id/roundedImageView5"
-        app:layout_constraintEnd_toEndOf="@+id/bubbleLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_rounded"
+        app:layout_constraintEnd_toEndOf="@+id/bubble_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/roundedImageView5"
-        app:layout_constraintTop_toTopOf="@+id/roundedImageView5"
+        app:layout_constraintStart_toEndOf="@+id/iv_rounded"
+        app:layout_constraintTop_toTopOf="@+id/iv_rounded"
         app:riv_oval="true" />
 
     <ImageView
@@ -132,8 +132,8 @@
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/bubbleLayout"
-        app:layout_constraintStart_toStartOf="@+id/bubbleLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/bubble_layout"
+        app:layout_constraintStart_toStartOf="@+id/bubble_layout"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_place_map" />
@@ -150,7 +150,7 @@
         android:lines="2"
         android:ellipsize="end"
         app:layout_constraintBottom_toBottomOf="@+id/iv_place"
-        app:layout_constraintEnd_toEndOf="@+id/bubbleLayout"
+        app:layout_constraintEnd_toEndOf="@+id/bubble_layout"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_place"
         app:layout_constraintTop_toTopOf="@+id/iv_place"
