@@ -7,30 +7,29 @@
 
     <ImageView
         android:id="@+id/iv_video_err"
-        android:layout_width="@dimen/_146sdp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_136sdp"
+        android:layout_height="@dimen/_136sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:src="@drawable/avatar_image"
-        app:layout_constraintBottom_toTopOf="@+id/tv_no_data"
+        app:layout_constraintBottom_toTopOf="@+id/tv_video_err"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/tv_no_data"
+        android:id="@+id/tv_video_err"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_46sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_46sdp"
         android:gravity="center_horizontal"
         android:text="No data update"
-        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/text_no_data"
+        android:textSize="@dimen/_13sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_video_err"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_video_err"
         app:layout_constraintTop_toBottomOf="@+id/iv_video_err" />
 </android.support.constraint.ConstraintLayout>
