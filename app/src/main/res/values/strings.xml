@@ -25,4 +25,7 @@
     <string name="err_document">No data update</string>
     <string name="button_see_detail">Xem Chi Tiết</string>
 
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+
 </resources>

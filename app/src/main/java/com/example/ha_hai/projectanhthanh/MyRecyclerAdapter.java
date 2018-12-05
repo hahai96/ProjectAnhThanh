@@ -20,16 +20,16 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.row_invitee, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_menu_nav, viewGroup, false);
         return new MyHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
-        myHolder.rv_link_invitee.setHasFixedSize(true);
-        myHolder.rv_link_invitee.setLayoutManager(new LinearLayoutManager(context));
-        myHolder.rv_link_invitee.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
-        myHolder.rv_link_invitee.setAdapter(new SecondRecyclerView(context));
+//        myHolder.rv_link_invitee.setHasFixedSize(true);
+//        myHolder.rv_link_invitee.setLayoutManager(new LinearLayoutManager(context));
+//        myHolder.rv_link_invitee.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
+//        myHolder.rv_link_invitee.setAdapter(new SecondRecyclerView(context));
     }
 
     @Override

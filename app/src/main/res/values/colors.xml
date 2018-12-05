@@ -20,5 +20,8 @@
     <color name="button_see_detail">#DF7B42</color>
     <color name="color_divider_pager">#e2dfdf</color>
     <color name="bg_item_viewpager">#f0f0f0</color>
+    <color name="bg_nav">#FFFBFA</color>
+    <color name="text_phone_header">#484747</color>
+
 
 </resources>
