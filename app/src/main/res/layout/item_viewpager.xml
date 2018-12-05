@@ -129,8 +129,8 @@
 
         <ImageView
             android:id="@+id/iv_location"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
@@ -153,8 +153,8 @@
 
         <ImageView
             android:id="@+id/iv_phone"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/iv_location"
             app:layout_constraintStart_toStartOf="@+id/iv_location"
@@ -163,8 +163,8 @@
 
         <ImageView
             android:id="@+id/iv_website"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/iv_phone"
             app:layout_constraintHorizontal_bias="1.0"
@@ -174,8 +174,8 @@
 
         <ImageView
             android:id="@+id/iv_email"
-            android:layout_width="@dimen/_16sdp"
-            android:layout_height="@dimen/_16sdp"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/iv_website"
             app:layout_constraintStart_toStartOf="@+id/iv_website"
