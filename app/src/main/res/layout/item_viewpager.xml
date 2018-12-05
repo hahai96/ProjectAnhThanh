@@ -2,6 +2,7 @@
 
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,9 +10,7 @@
     app:cardCornerRadius="@dimen/_10sdp"
     app:cardUseCompatPadding="true">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -19,148 +18,200 @@
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="@dimen/_35sdp"
-            android:background="#f0f0f0"
+            android:background="@color/bg_item_viewpager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_donors"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:padding="@dimen/_4sdp"
-            android:text="Nhà tài trợ"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="Công Ty Cổ Phần Him Lam"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/iv_close"
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toTopOf="@+id/view2" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_8sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_donors"
             app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/tv_donors"
             app:srcCompat="@drawable/ic_close_black_24dp" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/iv_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view2"
             app:srcCompat="@drawable/logo_himlam" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Công ty cổ phần Him Lam"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Địa chỉ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            android:textColor="@color/text_website"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@+id/iv_location"
+            tools:layout_editor_absoluteY="170dp" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Nhà tài trợ Kim Cương"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Điện thoại"
+            android:textColor="@color/text_website"
+            android:textSize="@dimen/_12ssp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_phone"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone"
+            app:layout_constraintTop_toTopOf="@+id/iv_phone" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0dp"
+            android:id="@+id/tv_website"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Địa chỉ trụ sở chính: 234 Ngô Tất Tố, Phường 22, Quận Bình Thạnh, Thành phố Hồ Chí Minh"
-            android:textColor="@color/text_categoty"
-            android:textSize="@dimen/_11ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Website"
+            android:textColor="@color/text_website"
+            android:textSize="@dimen/_12ssp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_website"
+            app:layout_constraintStart_toEndOf="@+id/iv_website"
+            app:layout_constraintTop_toTopOf="@+id/iv_website" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0dp"
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Điện thoại: (84.8) 3514 4348 - Fax: (84.8) 3514 4353"
-            android:textColor="@color/text_categoty"
-            android:textSize="@dimen/_11ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Email"
+            android:textColor="@color/text_website"
+            android:textSize="@dimen/_12ssp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_email"
+            app:layout_constraintStart_toEndOf="@+id/iv_email"
+            app:layout_constraintTop_toTopOf="@+id/iv_email" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:text="Website: www.himlam.com"
-            android:textColor="@color/text_categoty"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <View
-            android:id="@+id/view4"
+        <Button
+            android:id="@+id/divider_pager"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:background="#e2dfdf"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
-            android:text="Xem chi tiết"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="@dimen/_13ssp"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/custom_button_see_detail"
+            android:text="@string/button_see_detail"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view4" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_content_email" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+            app:srcCompat="@drawable/icon_location" />
+
+        <TextView
+            android:id="@+id/tv_content_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="@dimen/_12ssp"
+            android:text="234 Ngô Tất Tố - Phường 22 - Quận Bình Thạnh - Thành phố Hồ Chí Minh."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_phone"
+            app:layout_constraintTop_toTopOf="@+id/tv_address" />
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_location"
+            app:layout_constraintStart_toStartOf="@+id/iv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content_address"
+            app:srcCompat="@drawable/icon_phone1_79" />
+
+        <ImageView
+            android:id="@+id/iv_website"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_phone"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/iv_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content_phone"
+            app:srcCompat="@drawable/ic_computer_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_website"
+            app:layout_constraintStart_toStartOf="@+id/iv_website"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content_website"
+            app:srcCompat="@drawable/icon_emaildonvi" />
+
+        <TextView
+            android:id="@+id/tv_content_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="028 3514 4348"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_phone"
+            app:layout_constraintStart_toStartOf="@+id/tv_content_address"
+            app:layout_constraintTop_toTopOf="@+id/tv_phone" />
+
+        <TextView
+            android:id="@+id/tv_content_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://himlam.com"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_website"
+            app:layout_constraintStart_toStartOf="@+id/tv_content_phone"
+            app:layout_constraintTop_toTopOf="@+id/tv_website" />
+
+        <TextView
+            android:id="@+id/tv_content_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sale@himlam.com"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_mail"
+            app:layout_constraintStart_toStartOf="@+id/tv_content_website"
+            app:layout_constraintTop_toTopOf="@+id/tv_mail" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

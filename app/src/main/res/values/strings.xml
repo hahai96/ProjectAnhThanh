@@ -18,10 +18,11 @@
     <string name="fake_tv_description">Cắt băng khai trương và thăm không gian Văn hóa - Lịch sử</string>
     <string name="tv_description">Chủ tịch Hội Đồng Họ Dương Việt Nam. Chủ tịch HĐQT Ngân hàng TMCP Sài Gòn Thường Tín (Sacombank), Chủ tịch Hiệp hội Macca Việt Nam</string>
 
+    <string name="text_content_introduce">Là một doanh nhân ưu tú, tài đức vẹn toàn của Họ Dương Việt Nam. Ông từ một Thiếu tá quân đội trở thành một Doanh nhân nổi tiếng, ông chủ của Tập đoàn Him Lam - nơi có hơn 20 Công ty con là thành viên, đồng thời là Chủ tịch HĐQT Ngân hàng Sacombank. Ông là chuyên gia trong các lĩnh vực Xây dựng. Bất động sản; Xuất nhập khẩu; Tài chính ngân hàng.</string>
+
 
     <string name="err_video">No data update</string>
     <string name="err_document">No data update</string>
-
-    <string name="text_content_introduce">Là một doanh nhân ưu tú, tài đức vẹn toàn của Họ Dương Việt Nam. Ông từ một Thiếu tá quân đội trở thành một Doanh nhân nổi tiếng, ông chủ của Tập đoàn Him Lam - nơi có hơn 20 Công ty con là thành viên, đồng thời là Chủ tịch HĐQT Ngân hàng Sacombank. Ông là chuyên gia trong các lĩnh vực Xây dựng. Bất động sản; Xuất nhập khẩu; Tài chính ngân hàng.</string>
+    <string name="button_see_detail">Xem Chi Tiết</string>
 
 </resources>
