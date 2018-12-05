@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize" />
+
+        <include
+            layout="@layout/fragment_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_nav"
+            tools:layout_editor_absoluteY="25dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_avatar_header"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="@dimen/_58sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/_4sdp" />
+
+            <TextView
+                android:id="@+id/tv_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Dương Văn A"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_avatar_header"
+                app:layout_constraintStart_toStartOf="@+id/iv_avatar_header"
+                app:layout_constraintTop_toBottomOf="@+id/iv_avatar_header" />
+
+            <TextView
+                android:id="@+id/tv_phone_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="0904641589"
+                android:textColor="@color/text_phone_header"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_avatar_header"
+                app:layout_constraintStart_toStartOf="@+id/iv_avatar_header"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_header" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/bg_item_invitee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_header" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_menu_nav"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_menu_nav" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@color/bg_item_invitee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/custom_button_see_detail"
+                android:text="Đăng Xuất"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintVertical_bias="0.214" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
