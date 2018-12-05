@@ -10,6 +10,7 @@
     <color name="color_bubble_layout_main">#c9c6c6</color>
 
     <color name="text_person">#c9c6c6</color>
+    <color name="text_search_bar">#a5a6a7</color>
     <color name="bg_item_invitee">#F4F6F9</color>
     <color name="text_topic">#353434</color>
     <color name="text_content_invitee">#484747</color>
