@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_news"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="4dp" />
+
+    <TextView
+        android:id="@+id/tv_name_invitee"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Ông Dương Công Minh"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_news"
+        app:layout_constraintStart_toStartOf="@+id/iv_news"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextView
+        android:id="@+id/tv_content_invitee"
+        android:layout_width="283dp"
+        android:layout_height="64dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:orientation="horizontal"
+        android:text="@string/tv_description"
+        android:textSize="@dimen/_12sdp"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/tv_topic"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="#dcd7d7"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="Chủ Đề Chia Sẻ"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#353434"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="284dp" />
+
+</android.support.constraint.ConstraintLayout>

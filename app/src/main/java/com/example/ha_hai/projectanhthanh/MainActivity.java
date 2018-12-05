@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_list_guest);
+        setContentView(R.layout.item_viewpager);
 
 //        tv_place = findViewById(R.id.tv_place);
 //        tv_place.setText(Html.fromHtml(getString(R.string.location)));
@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
 //        tv_admob.setText(Html.fromHtml(getString(R.string.tv_admod)));
 
 
-        rv_link_invitee_detail = findViewById(R.id.rv_guest);
-        rv_link_invitee_detail.setHasFixedSize(true);
-        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
-        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
+//        rv_link_invitee_detail = findViewById(R.id.rv_guest);
+//        rv_link_invitee_detail.setHasFixedSize(true);
+//        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
+//        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+//        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
     }
 }
 
