@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_trangchu" />
+        app:srcCompat="@drawable/ic_navi_home" />
 
     <TextView
         android:id="@+id/textView2"

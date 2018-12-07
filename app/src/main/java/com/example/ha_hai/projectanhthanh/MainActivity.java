@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_navigation);
+        setContentView(R.layout.activity_fab);
 
 //        tv_place = findViewById(R.id.tv_place);
 //        tv_place.setText(Html.fromHtml(getString(R.string.location)));
@@ -35,43 +35,43 @@ public class MainActivity extends AppCompatActivity {
 //        tv_admob.setText(Html.fromHtml(getString(R.string.tv_admod)));
 
 
-        rv_link_invitee_detail = findViewById(R.id.rv_menu_nav);
-        rv_link_invitee_detail.setHasFixedSize(true);
-        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
-        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
-
-        mToolbar = findViewById(R.id.toolbar_nav);
-        setSupportActionBar(mToolbar);
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        drawerLayout = findViewById(R.id.drawer_layout);
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.open_drawer, R.string.close_drawer);
-        drawerLayout.addDrawerListener(drawerToggle);
-
-        drawerToggle.syncState();
+//        rv_link_invitee_detail = findViewById(R.id.rv_menu_nav);
+//        rv_link_invitee_detail.setHasFixedSize(true);
+//        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
+//        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+//        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
+//
+//        mToolbar = findViewById(R.id.toolbar_nav);
+//        setSupportActionBar(mToolbar);
+//
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//
+//        drawerLayout = findViewById(R.id.drawer_layout);
+//        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, mToolbar, R.string.open_drawer, R.string.close_drawer);
+//        drawerLayout.addDrawerListener(drawerToggle);
+//
+//        drawerToggle.syncState();
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        drawerToggle.onOptionsItemSelected(item);
-
-        return true;
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        drawerToggle.onConfigurationChanged(newConfig);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        drawerToggle.onOptionsItemSelected(item);
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//        drawerToggle.onConfigurationChanged(newConfig);
+//    }
 
 }
 

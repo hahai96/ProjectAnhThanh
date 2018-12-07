@@ -80,9 +80,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:text="Điện thoại"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             android:textColor="@color/text_website"
             android:textSize="@dimen/_12ssp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             app:layout_constraintBottom_toBottomOf="@+id/iv_phone"
             app:layout_constraintStart_toEndOf="@+id/iv_phone"
             app:layout_constraintTop_toTopOf="@+id/iv_phone" />
@@ -93,9 +93,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:text="Website"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             android:textColor="@color/text_website"
             android:textSize="@dimen/_12ssp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             app:layout_constraintBottom_toBottomOf="@+id/iv_website"
             app:layout_constraintStart_toEndOf="@+id/iv_website"
             app:layout_constraintTop_toTopOf="@+id/iv_website" />
@@ -106,9 +106,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:text="Email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             android:textColor="@color/text_website"
             android:textSize="@dimen/_12ssp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
             app:layout_constraintBottom_toBottomOf="@+id/iv_email"
             app:layout_constraintStart_toEndOf="@+id/iv_email"
             app:layout_constraintTop_toTopOf="@+id/iv_email" />
@@ -145,8 +145,8 @@
             android:layout_marginEnd="@dimen/_12sdp"
             android:ellipsize="end"
             android:maxLines="3"
-            android:textSize="@dimen/_12ssp"
             android:text="234 Ngô Tất Tố - Phường 22 - Quận Bình Thạnh - Thành phố Hồ Chí Minh."
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_phone"
             app:layout_constraintTop_toTopOf="@+id/tv_address" />
@@ -197,9 +197,9 @@
             android:id="@+id/tv_content_website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
             android:text="http://himlam.com"
             android:textSize="@dimen/_12ssp"
-            android:layout_marginEnd="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_website"
             app:layout_constraintStart_toStartOf="@+id/tv_content_phone"
             app:layout_constraintTop_toTopOf="@+id/tv_website" />
@@ -208,8 +208,8 @@
             android:id="@+id/tv_content_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sale@himlam.com"
             android:layout_marginEnd="@dimen/_12sdp"
+            android:text="sale@himlam.com"
             app:layout_constraintBottom_toBottomOf="@+id/tv_mail"
             app:layout_constraintStart_toStartOf="@+id/tv_content_website"
             app:layout_constraintTop_toTopOf="@+id/tv_mail" />
