@@ -2,19 +2,30 @@ package com.example.ha_hai.projectanhthanh;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.blankj.utilcode.util.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyHolder> {
 
     Context context;
+    List<Guest> mGuest;
+    List<Guest> mTempList = new ArrayList<>();
 
-    public MyRecyclerAdapter(Context context) {
+    public MyRecyclerAdapter(Context context, List<Guest> guests) {
         this.context = context;
+        this.mGuest = guests;
+        mTempList.addAll(guests);
     }
 
     @NonNull
@@ -26,25 +37,42 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
-//        myHolder.rv_link_invitee.setHasFixedSize(true);
-//        myHolder.rv_link_invitee.setLayoutManager(new LinearLayoutManager(context));
-//        myHolder.rv_link_invitee.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
-//        myHolder.rv_link_invitee.setAdapter(new SecondRecyclerView(context));
+        myHolder.tvName.setText(mGuest.get(i).getName());
+        myHolder.tvPhone.setText(mGuest.get(i).getPhone());
+        myHolder.tvId.setText(mGuest.get(i).getId());
     }
 
     @Override
     public int getItemCount() {
-        return 6;
+        return mGuest.size();
+    }
+
+    public void filter(String text) {
+        if (!StringUtils.isEmpty(text)) {
+            mGuest.clear();
+            for (int i = 0; i < mTempList.size(); i++) {
+                if (mTempList.get(i).getName().toLowerCase().contains(text.toLowerCase())) {
+                    mGuest.add(mTempList.get(i));
+                }
+            }
+
+            notifyDataSetChanged();
+        }
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
 
-//        RecyclerView rv_link_invitee;
+        @BindView(R.id.tv_name_guest)
+        TextView tvName;
+        @BindView(R.id.tv_phone_guest)
+        TextView tvPhone;
+        @BindView(R.id.tv_id_guest)
+        TextView tvId;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
-//            rv_link_invitee = itemView.findViewById(R.id.rv_link_invitee);
+            ButterKnife.bind(this, itemView);
         }
     }
 }
