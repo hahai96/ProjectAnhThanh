@@ -30,5 +30,8 @@
     <color name="bg_nav">#FFFBFA</color>
     <color name="text_phone_header">#484747</color>
 
+    <color name="text_id_guest">#484747</color>
+    <color name="text_phone_guest">#363636</color>
+
 
 </resources>

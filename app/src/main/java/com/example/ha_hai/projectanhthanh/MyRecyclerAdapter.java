@@ -20,7 +20,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_menu_nav, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_guest, viewGroup, false);
         return new MyHolder(view);
     }
 
@@ -39,12 +39,12 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     class MyHolder extends RecyclerView.ViewHolder {
 
-        RecyclerView rv_link_invitee;
+//        RecyclerView rv_link_invitee;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
-            rv_link_invitee = itemView.findViewById(R.id.rv_link_invitee);
+//            rv_link_invitee = itemView.findViewById(R.id.rv_link_invitee);
         }
     }
 }

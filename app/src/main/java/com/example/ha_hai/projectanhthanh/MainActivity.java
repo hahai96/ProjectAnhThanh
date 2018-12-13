@@ -15,6 +15,11 @@ import android.text.Html;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.mancj.materialsearchbar.MaterialSearchBar;
+
+import java.util.Arrays;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tv_admob;
@@ -27,23 +32,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fab);
+        setContentView(R.layout.layout_search);
+
+        mToolbar = findViewById(R.id.toolbar_search);
+        setSupportActionBar(mToolbar);
 
 //        tv_place = findViewById(R.id.tv_place);
 //        tv_place.setText(Html.fromHtml(getString(R.string.location)));
 //        tv_admob = findViewById(R.id.tv_admob);
 //        tv_admob.setText(Html.fromHtml(getString(R.string.tv_admod)));
 
+//
+        rv_link_invitee_detail = findViewById(R.id.rv_search);
+        rv_link_invitee_detail.setHasFixedSize(true);
+        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
+        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
 
-//        rv_link_invitee_detail = findViewById(R.id.rv_menu_nav);
-//        rv_link_invitee_detail.setHasFixedSize(true);
-//        rv_link_invitee_detail.setLayoutManager(new LinearLayoutManager(this));
-//        rv_link_invitee_detail.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-//        rv_link_invitee_detail.setAdapter(new MyRecyclerAdapter(this));
-//
-//        mToolbar = findViewById(R.id.toolbar_nav);
-//        setSupportActionBar(mToolbar);
-//
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //
