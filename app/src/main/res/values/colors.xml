@@ -22,7 +22,7 @@
     <color name="text_topic">#353434</color>
     <color name="text_content_invitee">#484747</color>
     <color name="text_categoty">#484747</color>
-    <color name="text_no_data">#484747</color>
+    <color name="text_no_data">#a5a6a7</color>
     <color name="text_website">#484747</color>
     <color name="button_see_detail">#DF7B42</color>
     <color name="color_divider_pager">#e2dfdf</color>
@@ -32,6 +32,5 @@
 
     <color name="text_id_guest">#484747</color>
     <color name="text_phone_guest">#363636</color>
-
 
 </resources>

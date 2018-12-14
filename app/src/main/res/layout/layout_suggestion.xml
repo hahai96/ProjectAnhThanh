@@ -31,10 +31,11 @@
             android:id="@+id/searchBar_suggestion"
             style="@style/MaterialSearchBarLight"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_13sdp"
             android:layout_marginEnd="@dimen/_13sdp"
-            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
             app:mt_hint="Tìm kiếm Diễn Giả"
             app:mt_placeholder="Tìm kiếm diễn giả"
             app:mt_placeholderColor="@color/text_search_bar"
@@ -42,10 +43,28 @@
             app:mt_searchIconTint="@color/text_search_bar" />
     </android.support.design.widget.AppBarLayout>
 
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:gravity="center"
+        android:text="Không có dữ liệu"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/text_no_data"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintVertical_bias="0.0" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_suggestion"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:visibility="visible"
         android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
