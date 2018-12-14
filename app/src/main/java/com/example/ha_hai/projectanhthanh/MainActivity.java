@@ -1,5 +1,6 @@
 package com.example.ha_hai.projectanhthanh;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -10,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         mRvGuest.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         mAdapter = new MyRecyclerAdapter(this, suggestions);
         mRvGuest.setAdapter(mAdapter);
+
+        ConstraintLayout.LayoutParams linearLayout = (ConstraintLayout.LayoutParams) mRvGuest.getLayoutParams();
 
         mSearchBar.addTextChangeListener(new TextWatcher() {
             @Override

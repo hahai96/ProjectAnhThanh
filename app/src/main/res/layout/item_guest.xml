@@ -6,31 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_guest"
-        android:layout_width="@dimen/_48sdp"
-        android:layout_height="@dimen/_48sdp"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_man"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_man" />
+        app:riv_corner_radius="@dimen/_4sdp" />
 
     <TextView
         android:id="@+id/tv_name_guest"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="@dimen/_1sdp"
-        android:layout_marginTop="@dimen/_4sdp"
         android:text="Dương Văn A"
-        android:textSize="@dimen/_13ssp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/_13ssp"
         app:layout_constraintBottom_toTopOf="@+id/tv_id_guest"
-        app:layout_constraintEnd_toStartOf="@+id/tv_phone_guest"
+        app:layout_constraintEnd_toStartOf="@+id/iv_phone"
         app:layout_constraintStart_toEndOf="@+id/iv_guest"
         app:layout_constraintTop_toTopOf="@+id/iv_guest" />
 
@@ -38,21 +40,27 @@
         android:id="@+id/tv_id_guest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_4sdp"
-        android:layout_marginTop="@dimen/_1sdp"
         android:text="Khách mời V123"
-        android:textSize="@dimen/_12ssp"
         android:textColor="@color/text_id_guest"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_guest"
         app:layout_constraintStart_toStartOf="@+id/tv_name_guest" />
+
+    <ImageView
+        android:id="@+id/iv_phone"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name_guest"
+        app:layout_constraintEnd_toStartOf="@+id/tv_phone_guest"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_guest"
+        app:srcCompat="@drawable/ic_phone" />
 
     <TextView
         android:id="@+id/tv_phone_guest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:drawableStart="@drawable/ic_phone"
-        android:drawablePadding="@dimen/_2sdp"
         android:text="0975381724"
         android:textColor="@color/text_phone_guest"
         android:textSize="@dimen/_12ssp"
