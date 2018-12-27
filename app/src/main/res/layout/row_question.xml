@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:paddingEnd="@dimen/_12sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_98sdp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/_14sdp"
+        android:text="Câu hỏi tới ông Dương Chí Thành: consectetur sed do incididunt ut labore et dolore magna"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_invitee"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_image"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:riv_corner_radius="@dimen/_4sdp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_name_invitee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Dương Công Minh"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_approved"
+        app:layout_constraintStart_toEndOf="@+id/iv_invitee"
+        app:layout_constraintTop_toTopOf="@+id/iv_invitee" />
+
+    <TextView
+        android:id="@+id/tv_content_invitee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="09:30 - 12/10/2018"
+        android:textColor="@color/text_categoty"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_invitee"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_invitee"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_invitee"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_invitee"/>
+
+    <ImageView
+        android:id="@+id/iv_approved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_approved"
+        app:layout_constraintStart_toStartOf="@+id/tv_approved"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_invitee"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+    <TextView
+        android:id="@+id/tv_approved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:text="Duyệt"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/text_approved"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_content_invitee"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/iv_approved" />
+</android.support.constraint.ConstraintLayout>

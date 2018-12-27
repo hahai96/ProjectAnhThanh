@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_club_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:lines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CLB Doanh Nghiệp Doanh Nhân Hà Nội" />
+
+        <ImageView
+            android:id="@+id/iv_map"
+            android:layout_width="@dimen/_82sdp"
+            android:layout_height="@dimen/_82sdp"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/tv_show_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="show map"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title.Inverse"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_map"
+            app:layout_constraintStart_toStartOf="@+id/iv_map"
+            app:layout_constraintTop_toBottomOf="@+id/iv_map" />
+
+        <LinearLayout
+            android:id="@+id/layout_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/iv_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_club_name">
+
+            <ImageView
+                android:id="@+id/iv_place"
+                android:layout_width="@dimen/_9sdp"
+                android:layout_height="@dimen/_9sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/ic_place_map" />
+
+            <TextView
+                android:id="@+id/tv_place_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="Vị Trí: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title.Inverse"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:text="GH 21-26" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/iv_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_place">
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="@dimen/_9sdp"
+                android:layout_height="@dimen/_9sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/icon_location" />
+
+            <TextView
+                android:id="@+id/tv_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="Địa điểm: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title.Inverse"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:text="Tầng 1 tòa nhà ABC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/iv_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_location">
+
+            <ImageView
+                android:id="@+id/iv_number"
+                android:layout_width="@dimen/_9sdp"
+                android:layout_height="@dimen/_9sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/ic_fab_shop" />
+
+            <TextView
+                android:id="@+id/tv_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="Số lượng: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title.Inverse"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                tools:text="05 gian hàng" />
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_number">
+
+            <View
+                android:id="@+id/view_news"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="@string/introduction"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_news"
+                app:layout_constraintStart_toStartOf="@+id/view_news"
+                app:layout_constraintTop_toTopOf="@+id/view_news" />
+
+            <TextView
+                android:id="@+id/tv_introduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_news"
+                tools:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English." />
+
+            <TextView
+                android:id="@+id/tv_show_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/white"
+                android:text="show more"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_images"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_introduction">
+
+            <View
+                android:id="@+id/view_images"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="list shop"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_images"
+                app:layout_constraintStart_toStartOf="@+id/view_images"
+                app:layout_constraintTop_toTopOf="@+id/view_images" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_shop_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_images"
+                tools:layout_height="@dimen/_300sdp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

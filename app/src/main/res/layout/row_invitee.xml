@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/bg_item_invitee"
-    android:paddingBottom="@dimen/_8sdp">
+    android:layout_height="wrap_content">
 
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_115sdp"
+        android:layout_height="@dimen/_110sdp"
         android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/iv_news"
-        android:layout_width="0dp"
+        android:id="@+id/iv_invitee"
+        android:layout_width="@dimen/_75sdp"
         android:layout_height="@dimen/_75sdp"
-        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/avatar_image"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:riv_corner_radius="@dimen/_4sdp" />
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:riv_corner_radius="@dimen/_4sdp"
+        app:riv_oval="true" />
 
     <TextView
         android:id="@+id/tv_name_invitee"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:ellipsize="end"
         android:maxLines="1"
         android:text="Ông Dương Công Minh"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/_17sdp"
+        android:textSize="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toEndOf="@+id/iv_news"
-        app:layout_constraintTop_toTopOf="@+id/iv_news" />
+        app:layout_constraintStart_toEndOf="@+id/iv_invitee"
+        app:layout_constraintTop_toTopOf="@+id/iv_invitee"/>
 
     <TextView
         android:id="@+id/tv_content_invitee"
@@ -51,50 +52,21 @@
         android:layout_height="0dp"
         android:ellipsize="end"
         android:maxLines="3"
-        android:orientation="horizontal"
         android:text="@string/tv_description"
+        android:orientation="horizontal"
+        android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        android:textColor="@color/text_content_invitee"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_news"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_invitee"
         app:layout_constraintEnd_toEndOf="@+id/tv_name_invitee"
         app:layout_constraintStart_toStartOf="@+id/tv_name_invitee"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_invitee" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_invitee"/>
 
-    <TextView
-        android:id="@+id/tv_topic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/_8sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        android:text="Chủ Đề Chia Sẻ"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/text_topic"
-        android:textSize="@dimen/_14sdp"
-        android:textStyle="bold"
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_6sdp"
+        android:background="@color/view_line_bg_main"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_link_invitee"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:nestedScrollingEnabled="false"
-        android:paddingLeft="@dimen/_8sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_topic"
-        tools:itemCount="2"
-        tools:listitem="@layout/row_textview" />
-
-    <android.support.constraint.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:constraint_referenced_ids="rv_link_invitee,tv_topic" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

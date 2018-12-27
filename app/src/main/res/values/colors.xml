@@ -33,4 +33,7 @@
     <color name="text_id_guest">#484747</color>
     <color name="text_phone_guest">#363636</color>
 
+    <color name="text_approved">#68c146</color>
+
+
 </resources>
