@@ -36,6 +36,8 @@
     <color name="text_approved">#68c146</color>
     <color name="bg_button_accept">#f58320</color>
     <color name="bg_layout_person">#f4f6f9</color>
+    <color name="bg_button_cancel_register">#f4f6f9</color>
+    <color name="button_cancel_register">#f58320</color>
 
 
 
