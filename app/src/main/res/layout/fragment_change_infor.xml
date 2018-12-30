@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_layout_person">
+
+    <FrameLayout
+        android:id="@+id/layout_avatar"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_image"
+            app:riv_corner_radius="@dimen/_4sdp"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/icon_iconcamera" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_change_infor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@android:color/white"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/bt_accept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_avatar"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_information" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_change_infor"/>
+
+    <Button
+        android:id="@+id/bt_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/_12sdp"
+        android:background="@drawable/button_accept"
+        app:layout_constraintTop_toBottomOf="@id/rv_change_infor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

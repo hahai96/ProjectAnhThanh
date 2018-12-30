@@ -30,7 +30,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 12;
     }
 
 

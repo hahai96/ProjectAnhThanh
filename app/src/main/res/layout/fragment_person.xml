@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_layout_person">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_club_name"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_location"
+        app:riv_corner_radius="@dimen/_4sdp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_person_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Dương Văn A"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_person_name"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/ic_place_map" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="0988888888"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/layout_phone"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/icon_location" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="abcduong@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/icon_location" />
+
+        <TextView
+            android:id="@+id/tv_location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="109 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_person"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@android:color/white"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_location"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_person" />
+
+</android.support.constraint.ConstraintLayout>
