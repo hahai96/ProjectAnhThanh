@@ -37,6 +37,7 @@
         app:wheel_curved="true"
         app:wheel_atmospheric="true"
         app:wheel_visible_item_count="5"
+        app:wheel_curtain_color="@color/curtain_color"
         app:layout_constraintHorizontal_weight="1"
         app:wheel_selected_item_text_color="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/wp_month"
@@ -51,6 +52,7 @@
         app:wheel_curved="true"
         app:wheel_visible_item_count="5"
         app:wheel_atmospheric="true"
+        app:wheel_curtain_color="@color/curtain_color"
         app:wheel_selected_item_text_color="@android:color/black"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintEnd_toStartOf="@+id/wp_year"
@@ -61,6 +63,7 @@
         android:id="@+id/wp_year"
         android:layout_width="0dp"
         android:layout_height="@dimen/_150sdp"
+        app:wheel_curtain_color="@color/curtain_color"
         app:wheel_curtain="true"
         app:wheel_curved="true"
         app:wheel_visible_item_count="5"
@@ -71,11 +74,19 @@
         app:layout_constraintStart_toEndOf="@+id/wp_month"
         app:layout_constraintTop_toBottomOf="@+id/view_choose_birthday" />
 
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_8sdp"
+        android:background="#666666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wp_year"/>
+
     <Button
         android:id="@+id/bt_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
         android:background="@android:color/white"
         android:text="Lưu"
         android:textAllCaps="false"
@@ -83,9 +94,7 @@
         android:textSize="@dimen/_12sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wp_day"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/view_space" />
 
 </android.support.constraint.ConstraintLayout>
