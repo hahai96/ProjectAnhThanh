@@ -1,75 +1,632 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/bg_layout_person">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/layout_avatar"
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/iv_avatar"
-            android:layout_width="@dimen/_75sdp"
-            android:layout_height="@dimen/_75sdp"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/avatar_image"
-            app:riv_corner_radius="@dimen/_4sdp"
-            app:riv_oval="true" />
-
-        <ImageView
-            android:layout_width="@dimen/_24sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:layout_gravity="bottom|right"
-            android:src="@drawable/icon_iconcamera" />
-    </FrameLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_change_infor"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:paddingStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:background="@android:color/white"
-        android:nestedScrollingEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/bt_accept"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_avatar"
-        tools:itemCount="8"
-        tools:listitem="@layout/item_information" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_change_infor"/>
-
-    <Button
-        android:id="@+id/bt_accept"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cập nhật"
-        android:textSize="@dimen/_12sdp"
-        android:textColor="@android:color/white"
-        android:layout_margin="@dimen/_12sdp"
-        android:background="@drawable/button_accept"
-        app:layout_constraintTop_toBottomOf="@id/rv_change_infor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/bg_layout_person">
 
-</android.support.constraint.ConstraintLayout>
+        <FrameLayout
+            android:id="@+id/layout_avatar"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_image"
+                app:riv_corner_radius="@dimen/_4sdp"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/icon_iconcamera" />
+        </FrameLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:paddingStart="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_avatar">
+
+            <TextView
+                android:id="@+id/tv_ho_ten"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Họ Tên"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:hint="Dương Văn A"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ho_ten" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_name">
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Số điện thoại"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="0123456789"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone_number" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_phone_number"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_birth_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_phone_number">
+
+            <TextView
+                android:id="@+id/tv_birth_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Số điện thoại"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow_birth_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_birth_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:hint="0123456789"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="@id/tv_birth_day"
+                app:layout_constraintStart_toStartOf="@id/tv_birth_day"
+                app:layout_constraintTop_toBottomOf="@id/tv_birth_day" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_birth_day"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_birth_day"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingStart="@dimen/_10sdp"
+            android:background="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_birth_day">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Giới tính"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sex">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bg_button_accept"
+                    android:checked="true"
+                    android:text="Nam" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bg_button_accept"
+                    android:text="Nữ" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_sex"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_sex">
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Email"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="abcduong@gmail.com"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_email"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_email">
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Tỉnh/TP"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow_city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:hint="Hà Nội"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="@id/tv_city"
+                app:layout_constraintStart_toStartOf="@id/tv_city"
+                app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_city"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_city"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_city">
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Địa chỉ"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="109 Trần Hưng Đạo, Quận Hoàn Kiếm, Hà Nội"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_address"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_address">
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Công ty"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="Công Ty CP Phát Triển Công Nghệ Liên Việt"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_company"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_address_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_company">
+
+            <TextView
+                android:id="@+id/tv_address_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Địa chỉ công ty"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_address_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="109 Trần Hưng Đạo, Quận Hoàn Kiếm, Hà Nội"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address_company" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_address_company"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_regency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_address_company">
+
+            <TextView
+                android:id="@+id/tv_regency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Chức vụ"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_regency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:hint="Trưởng Phòng"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_regency" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_regency"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_city_club"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_12sdp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_regency">
+
+            <TextView
+                android:id="@+id/tv_city_club"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_1sdp"
+                android:text="Số điện thoại"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@id/iv_city_club"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_city_club"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:hint="0123456789"
+                android:textSize="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="@id/tv_city_club"
+                app:layout_constraintStart_toStartOf="@id/tv_city_club"
+                app:layout_constraintTop_toBottomOf="@id/tv_city_club" />
+
+            <ImageView
+                android:id="@+id/iv_city_club"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_city_club"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_city_club" />
+
+        <Button
+            android:id="@+id/bt_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/button_accept"
+            android:text="Cập nhật"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_city_club" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -22,15 +22,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_learn_about_duong_family);
+        setContentView(R.layout.fragment_change_infor);
         ButterKnife.bind(this);
 
-        rv_duong_family = findViewById(R.id.rv_duong_family);
-        rv_duong_family.setHasFixedSize(true);
-        rv_duong_family.setLayoutManager(new GridLayoutManager(this, 2));
-        rv_duong_family.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        mAdapterInvitee = new MyRecyclerAdapter(this, R.layout.item_duong_family);
-        rv_duong_family.setAdapter(mAdapterInvitee);
+//        rv_duong_family = findViewById(R.id.rv_duong_family);
+//        rv_duong_family.setHasFixedSize(true);
+//        rv_duong_family.setLayoutManager(new GridLayoutManager(this, 2));
+//        rv_duong_family.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+//        mAdapterInvitee = new MyRecyclerAdapter(this, R.layout.item_duong_family);
+//        rv_duong_family.setAdapter(mAdapterInvitee);
 
 //        btAccept = findViewById(R.id.bt_accept);
 //        btAccept.setOnClickListener(new View.OnClickListener() {
