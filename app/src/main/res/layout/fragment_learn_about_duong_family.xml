@@ -4,118 +4,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/layout_1"
+
+    <ImageView
+        android:id="@+id/iv_1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintEnd_toStartOf="@+id/layout_2"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_duong_family" />
-
-        <TextView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="2"
-            android:text="Cờ họ Dương Việt Nam"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/layout_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_1"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_duong_family" />
-
-        <TextView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="2"
-            android:text="Cờ họ Dương Việt Nam"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/layout_3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flag_duong_family"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/iv_2"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintEnd_toStartOf="@+id/layout_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_1">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_duong_family" />
-
-        <TextView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="2"
-            android:text="Cờ họ Dương Việt Nam"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/layout_4"
-        android:layout_width="0dp"
+    <TextView
+        android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="1"
+        android:layout_gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Cờ họ Dương Việt Nam"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_1"
+        app:layout_constraintEnd_toEndOf="@id/iv_1"
+        app:layout_constraintStart_toStartOf="@id/iv_1" />
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flag_duong_family"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_3"
-        app:layout_constraintTop_toBottomOf="@id/layout_2">
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/iv_1"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/flag_duong_family" />
+    <TextView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Cờ họ Dương Việt Nam"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_2"
+        app:layout_constraintEnd_toEndOf="@id/iv_2"
+        app:layout_constraintStart_toStartOf="@id/iv_2" />
 
-        <TextView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="2"
-            android:text="Cờ họ Dương Việt Nam"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp" />
+    <ImageView
+        android:id="@+id/iv_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/flag_duong_family"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/iv_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_1" />
 
-    </FrameLayout>
+    <TextView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Cờ họ Dương Việt Nam"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_3"
+        app:layout_constraintEnd_toEndOf="@id/iv_3"
+        app:layout_constraintStart_toStartOf="@id/iv_3" />
+
+    <ImageView
+        android:id="@+id/iv_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_weight="1"
+        android:src="@drawable/flag_duong_family"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_3"
+        app:layout_constraintTop_toBottomOf="@id/iv_2" />
+
+    <TextView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Cờ họ Dương Việt Nam"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_4"
+        app:layout_constraintEnd_toEndOf="@id/iv_4"
+        app:layout_constraintStart_toStartOf="@id/iv_4" />
 
 </android.support.constraint.ConstraintLayout>
