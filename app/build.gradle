@@ -45,6 +45,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
     implementation 'com.blankj:utilcode:1.22.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.github.florent37:singledateandtimepicker:2.1.2'
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    implementation 'com.brucetoo.pickview:library:1.2.3'
 }
 
 repositories {

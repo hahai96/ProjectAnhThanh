@@ -38,6 +38,7 @@
     <color name="bg_layout_person">#f4f6f9</color>
     <color name="bg_button_cancel_register">#f4f6f9</color>
     <color name="button_cancel_register">#f58320</color>
+    <color name="button_save_dialog">#f58320</color>
 
 
 
