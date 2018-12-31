@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -19,57 +20,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.bruce.pickerview.LoopView
-        android:id="@+id/lv_day"
+    <View
+        android:id="@+id/view_choose_birthday"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_150sdp"
-        app:canLoop="true"
-        app:centerTextColor="#ff000000"
-        app:drawItemCount="7"
-        app:initPosition="3"
-        app:layout_constraintEnd_toStartOf="@+id/lv_month"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_choose_birth_day"
-        app:lineColor="@color/colorPrimary"
-        app:textSize="25sp"
-        app:topBottomTextColor="#ffafafaf" />
-
-    <com.bruce.pickerview.LoopView
-        android:id="@+id/lv_month"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_150sdp"
-        app:canLoop="false"
-        app:centerTextColor="#ff000000"
-        app:drawItemCount="7"
-        app:initPosition="3"
-        app:layout_constraintEnd_toStartOf="@+id/lv_year"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/lv_day"
-        app:layout_constraintTop_toBottomOf="@+id/tv_choose_birth_day"
-        app:lineColor="@color/colorPrimary"
-        app:textSize="25sp"
-        app:topBottomTextColor="#ffafafaf" />
-
-    <com.bruce.pickerview.LoopView
-        android:id="@+id/lv_year"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_150sdp"
-        app:canLoop="true"
-        app:centerTextColor="#ff000000"
-        app:drawItemCount="7"
-        app:initPosition="3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/tv_choose_birth_day"/>
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/wp_day"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150sdp"
+        app:wheel_curtain="true"
+        app:wheel_curved="true"
+        app:wheel_atmospheric="true"
+        app:wheel_visible_item_count="5"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/lv_month"
-        app:layout_constraintTop_toBottomOf="@+id/tv_choose_birth_day"
-        app:lineColor="@color/colorPrimary"
-        app:textSize="25sp"
-        app:topBottomTextColor="#ffafafaf" />
+        app:wheel_selected_item_text_color="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/wp_month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_choose_birthday" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/wp_month"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150sdp"
+        app:wheel_curtain="true"
+        app:wheel_curved="true"
+        app:wheel_visible_item_count="5"
+        app:wheel_atmospheric="true"
+        app:wheel_selected_item_text_color="@android:color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/wp_year"
+        app:layout_constraintStart_toEndOf="@+id/wp_day"
+        app:layout_constraintTop_toBottomOf="@+id/view_choose_birthday" />
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/wp_year"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150sdp"
+        app:wheel_curtain="true"
+        app:wheel_curved="true"
+        app:wheel_visible_item_count="5"
+        app:wheel_atmospheric="true"
+        app:wheel_selected_item_text_color="@android:color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wp_month"
+        app:layout_constraintTop_toBottomOf="@+id/view_choose_birthday" />
 
     <Button
         android:id="@+id/bt_save"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_day"
+        app:layout_constraintTop_toBottomOf="@id/wp_day"
         app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

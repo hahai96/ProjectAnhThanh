@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_choose_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="Chọn Tỉnh/TP"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_choose_city"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_choose_city"/>
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/wp_city"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150sdp"
+        app:wheel_curtain="true"
+        app:wheel_curved="true"
+        app:wheel_atmospheric="true"
+        app:wheel_visible_item_count="5"
+        app:wheel_selected_item_text_color="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_choose_city" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@android:color/white"
+        android:text="Lưu"
+        android:textAllCaps="false"
+        android:textColor="@color/button_save_dialog"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wp_city" />
+
+</android.support.constraint.ConstraintLayout>
